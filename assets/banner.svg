@@ -1,0 +1,20 @@
+<svg width="1280" height="260" viewBox="0 0 1280 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="mission-control">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#7ee787"/><stop offset="50%" stop-color="#79c0ff"/><stop offset="100%" stop-color="#d2a8ff"/>
+  </linearGradient></defs>
+  <rect width="1280" height="260" rx="16" fill="#0d1117" stroke="#30363d" stroke-width="2"/>
+  <text x="80" y="112" font-family="'Cascadia Code',Consolas,monospace" font-size="52" font-weight="700" fill="#e6edf3">mission<tspan fill="url(#g)">-control</tspan></text>
+  <text x="82" y="152" font-family="'Cascadia Code',Consolas,monospace" font-size="19" fill="#8b949e">one dashboard over a fleet of 15 local AI systems — status, freshness, results</text>
+  <text x="82" y="200" font-family="'Cascadia Code',Consolas,monospace" font-size="15" fill="#79c0ff">scan artifacts in place&#160;&#160;&#8594;&#160;&#160;<tspan fill="#7ee787">🟢 fresh</tspan>&#160;&#160;<tspan fill="#ffbd2e">🟡 recent</tspan>&#160;&#160;<tspan fill="#8b949e">⚪ idle</tspan>&#160;&#160;&#8594;&#160;&#160;<tspan fill="#d2a8ff">one screen</tspan></text>
+  <g transform="translate(1100,128)">
+    <rect x="-85" y="-60" width="52" height="36" rx="6" fill="#0d1117" stroke="#7ee787" stroke-width="2"/>
+    <rect x="-26" y="-60" width="52" height="36" rx="6" fill="#0d1117" stroke="#7ee787" stroke-width="2"/>
+    <rect x="33" y="-60" width="52" height="36" rx="6" fill="#0d1117" stroke="#ffbd2e" stroke-width="2"/>
+    <rect x="-85" y="-14" width="52" height="36" rx="6" fill="#0d1117" stroke="#7ee787" stroke-width="2"/>
+    <rect x="-26" y="-14" width="52" height="36" rx="6" fill="#0d1117" stroke="#30363d" stroke-width="2"/>
+    <rect x="33" y="-14" width="52" height="36" rx="6" fill="#0d1117" stroke="#7ee787" stroke-width="2"/>
+    <rect x="-85" y="32" width="52" height="36" rx="6" fill="#0d1117" stroke="#ffbd2e" stroke-width="2"/>
+    <rect x="-26" y="32" width="52" height="36" rx="6" fill="#0d1117" stroke="#7ee787" stroke-width="2"/>
+    <rect x="33" y="32" width="52" height="36" rx="6" fill="#0d1117" stroke="#7ee787" stroke-width="2"/>
+  </g>
+</svg>
