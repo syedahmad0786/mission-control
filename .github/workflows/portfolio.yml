@@ -1,0 +1,33 @@
+name: Portfolio verification
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync --locked
+      - run: uv run python -m unittest discover -s tests -v
+      - name: Verify OpenAPI is current
+        run: |
+          uv run python -c "import json; from pathlib import Path; from server import app; Path('postman/openapi.json').write_text(json.dumps(app.openapi(), indent=2) + '\n')"
+          git diff --exit-code -- postman/openapi.json
+      - uses: gitleaks/gitleaks-action@v2
+        env: { GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}" }
+      - name: Start API
+        run: |
+          uv run uvicorn server:app --host 127.0.0.1 --port 8000 > server.log 2>&1 &
+          for i in {1..30}; do curl -fsS http://127.0.0.1:8000/api/v1/health && break; sleep 1; done
+      - name: Run Postman contract suite
+        run: |
+          curl -o- https://dl-cli.pstmn.io/install/linux64.sh | sh
+          postman collection run postman/agentops-mission-control.postman_collection.json -e postman/agentops-mission-control.postman_environment.json --bail
+      - name: Run desktop and 390px browser checks
+        run: |
+          uv run playwright install --with-deps chromium
+          BASE_URL=http://127.0.0.1:8000 uv run python tests/browser_smoke.py

@@ -1,0 +1,25 @@
+[project]
+name = "agentops-mission-control"
+version = "1.0.0"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "fastapi>=0.136,<1",
+  "opentelemetry-api>=1.40,<2",
+  "opentelemetry-exporter-otlp-proto-http>=1.40,<2",
+  "opentelemetry-sdk>=1.40,<2",
+  "pydantic>=2.10,<3",
+  "streamlit>=1.36,<2",
+  "uvicorn>=0.34,<1",
+]
+
+[project.scripts]
+app = "server:app"
+
+[tool.uv]
+package = false
+
+[tool.vercel]
+entrypoint = "server.py"
+
+[dependency-groups]
+dev = ["playwright>=1.58,<2"]

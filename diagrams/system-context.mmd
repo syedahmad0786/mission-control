@@ -1,0 +1,9 @@
+flowchart LR
+  A[Agent runtimes] -->|telemetry| B[FastAPI intake]
+  C[Replay fixtures] --> B
+  B --> D[Pydantic validation]
+  D --> E[Deterministic incident rules]
+  E --> F[Run record]
+  F --> G[Operations dashboard]
+  E --> H[OpenTelemetry span]
+  H --> I[Langfuse OTLP]
