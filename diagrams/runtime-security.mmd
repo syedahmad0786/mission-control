@@ -1,0 +1,10 @@
+flowchart LR
+  A[Browser or Postman] --> B[Five run rate limit]
+  B --> C[FastAPI contract]
+  C --> D[Schema and size checks]
+  D --> E[Replay or submitted telemetry]
+  E --> F[Read only analysis]
+  F --> G[Content hash evidence]
+  F --> H[OTLP trace]
+  G --> I[Vercel preview]
+  H --> J[Optional Langfuse]

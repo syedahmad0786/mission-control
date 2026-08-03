@@ -1,0 +1,572 @@
+{
+  "item": [
+    {
+      "name": "api",
+      "description": "",
+      "item": [
+        {
+          "name": "v1",
+          "description": "",
+          "item": [
+            {
+              "name": "health",
+              "description": "",
+              "item": [
+                {
+                  "id": "ab5df220-0a5c-4b43-a215-0fcb793f5c13",
+                  "name": "Health",
+                  "request": {
+                    "name": "Health",
+                    "description": {},
+                    "url": {
+                      "path": [
+                        "api",
+                        "v1",
+                        "health"
+                      ],
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "query": [],
+                      "variable": []
+                    },
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "method": "GET",
+                    "body": {},
+                    "auth": null
+                  },
+                  "response": [
+                    {
+                      "id": "a7581ad7-5c59-4076-b9c2-ff1a5b893114",
+                      "name": "Successful Response",
+                      "originalRequest": {
+                        "url": {
+                          "path": [
+                            "api",
+                            "v1",
+                            "health"
+                          ],
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "query": [],
+                          "variable": []
+                        },
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "method": "GET",
+                        "body": {}
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "body": "{\n  \"key_0\": false,\n  \"key_1\": 6901,\n  \"key_2\": 7085.4086096302835\n}",
+                      "cookie": [],
+                      "_postman_previewlanguage": "json"
+                    }
+                  ],
+                  "event": [
+                    {
+                      "script": {
+                        "type": "text/javascript",
+                        "packages": {},
+                        "exec": [
+                          "pm.test(\"HTTP status is successful\", () => pm.expect(pm.response.code).to.be.oneOf([200, 202]));",
+                          "pm.test(\"Response is JSON\", () => pm.response.to.be.json);",
+                          "const body = pm.response.json();",
+                          "pm.test(\"Service is healthy\", () => pm.expect(body.status).to.eql(\"ok\"));"
+                        ]
+                      },
+                      "listen": "test"
+                    }
+                  ],
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  }
+                }
+              ]
+            },
+            {
+              "name": "capabilities",
+              "description": "",
+              "item": [
+                {
+                  "id": "41cbdf67-4571-408d-9882-95fa3a4a8063",
+                  "name": "Capabilities",
+                  "request": {
+                    "name": "Capabilities",
+                    "description": {},
+                    "url": {
+                      "path": [
+                        "api",
+                        "v1",
+                        "capabilities"
+                      ],
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "query": [],
+                      "variable": []
+                    },
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "method": "GET",
+                    "body": {},
+                    "auth": null
+                  },
+                  "response": [
+                    {
+                      "id": "344cc642-5399-4259-92a9-4e33950537ab",
+                      "name": "Successful Response",
+                      "originalRequest": {
+                        "url": {
+                          "path": [
+                            "api",
+                            "v1",
+                            "capabilities"
+                          ],
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "query": [],
+                          "variable": []
+                        },
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "method": "GET",
+                        "body": {}
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "body": "{\n  \"key_0\": 9214.002676661872\n}",
+                      "cookie": [],
+                      "_postman_previewlanguage": "json"
+                    }
+                  ],
+                  "event": [
+                    {
+                      "script": {
+                        "type": "text/javascript",
+                        "packages": {},
+                        "exec": [
+                          "pm.test(\"HTTP status is successful\", () => pm.expect(pm.response.code).to.be.oneOf([200, 202]));",
+                          "pm.test(\"Response is JSON\", () => pm.response.to.be.json);"
+                        ]
+                      },
+                      "listen": "test"
+                    }
+                  ],
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  }
+                }
+              ]
+            },
+            {
+              "name": "telemetry",
+              "description": "",
+              "item": [
+                {
+                  "name": "runs",
+                  "description": "",
+                  "item": [
+                    {
+                      "id": "7557c2a2-af1c-4dff-b6ef-5e6a6d36148a",
+                      "name": "Golden replay: failed",
+                      "request": {
+                        "name": "Ingest",
+                        "description": {},
+                        "url": {
+                          "path": [
+                            "api",
+                            "v1",
+                            "telemetry",
+                            "runs"
+                          ],
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "query": [],
+                          "variable": []
+                        },
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "method": "POST",
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\r\n  \"input\": {},\r\n  \"idempotency_key\": \"postman-agentops-0001\",\r\n  \"scenario\": \"failed\",\r\n  \"mode\": \"replay\"\r\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "auth": null
+                      },
+                      "response": [
+                        {
+                          "id": "a1fdc6c5-04ae-4e9e-a813-5ee6e3588c62",
+                          "name": "Successful Response",
+                          "originalRequest": {
+                            "url": {
+                              "path": [
+                                "api",
+                                "v1",
+                                "telemetry",
+                                "runs"
+                              ],
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "query": [],
+                              "variable": []
+                            },
+                            "header": [
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "method": "POST",
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{\n  \"idempotency_key\": \"<string>\",\n  \"scenario\": \"healthy\",\n  \"input\": {\n    \"key_0\": 967\n  },\n  \"mode\": \"replay\"\n}",
+                              "options": {
+                                "raw": {
+                                  "headerFamily": "json",
+                                  "language": "json"
+                                }
+                              }
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "body": "{\n  \"run_id\": \"<string>\",\n  \"scenario\": \"<string>\",\n  \"mode\": \"<string>\",\n  \"created_at\": \"<dateTime>\",\n  \"input_hash\": \"<string>\",\n  \"agent_steps\": [\n    {\n      \"key_0\": \"string\",\n      \"key_1\": \"string\"\n    },\n    {\n      \"key_0\": 2228\n    }\n  ],\n  \"outputs\": {\n    \"key_0\": 7656.415157778218,\n    \"key_1\": \"string\"\n  },\n  \"evidence\": [\n    {\n      \"source\": \"<string>\",\n      \"locator\": \"<string>\",\n      \"retrieved_at\": \"<dateTime>\",\n      \"content_hash\": \"<string>\"\n    },\n    {\n      \"source\": \"<string>\",\n      \"locator\": \"<string>\",\n      \"retrieved_at\": \"<dateTime>\",\n      \"content_hash\": \"<string>\"\n    }\n  ],\n  \"usage\": {\n    \"latency_ms\": \"<integer>\",\n    \"model\": \"deterministic/replay\",\n    \"tokens\": 0,\n    \"estimated_cost_usd\": 0\n  },\n  \"status\": \"completed\",\n  \"errors\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                          "cookie": [],
+                          "_postman_previewlanguage": "json"
+                        },
+                        {
+                          "id": "5d91d5e8-1a1c-49f7-b5d3-88cdc0f93a05",
+                          "name": "Validation Error",
+                          "originalRequest": {
+                            "url": {
+                              "path": [
+                                "api",
+                                "v1",
+                                "telemetry",
+                                "runs"
+                              ],
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "query": [],
+                              "variable": []
+                            },
+                            "header": [
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "method": "POST",
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{\n  \"idempotency_key\": \"<string>\",\n  \"scenario\": \"healthy\",\n  \"input\": {\n    \"key_0\": 967\n  },\n  \"mode\": \"replay\"\n}",
+                              "options": {
+                                "raw": {
+                                  "headerFamily": "json",
+                                  "language": "json"
+                                }
+                              }
+                            }
+                          },
+                          "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+                          "code": 422,
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\",\n      \"input\": \"\",\n      \"ctx\": {}\n    },\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\",\n      \"input\": \"\",\n      \"ctx\": {}\n    }\n  ]\n}",
+                          "cookie": [],
+                          "_postman_previewlanguage": "json"
+                        }
+                      ],
+                      "event": [
+                        {
+                          "script": {
+                            "type": "text/javascript",
+                            "packages": {},
+                            "exec": [
+                              "pm.test(\"HTTP status is successful\", () => pm.expect(pm.response.code).to.be.oneOf([200, 202]));",
+                              "pm.test(\"Response is JSON\", () => pm.response.to.be.json);",
+                              "const body = pm.response.json();",
+                              "pm.test(\"Run ID returned\", () => pm.expect(body.run_id).to.be.a(\"string\"));",
+                              "pm.collectionVariables.set(\"run_id\", body.run_id);",
+                              "pm.expect(body.outputs.mutations_performed).to.eql(0);"
+                            ]
+                          },
+                          "listen": "test"
+                        }
+                      ],
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "runs",
+              "description": "",
+              "item": [
+                {
+                  "name": "{run_id}",
+                  "description": "",
+                  "item": [
+                    {
+                      "id": "c7e676b2-432c-4370-aeb4-7b3e095102d8",
+                      "name": "Read the created run",
+                      "request": {
+                        "name": "Run",
+                        "description": {},
+                        "url": {
+                          "path": [
+                            "api",
+                            "v1",
+                            "runs",
+                            ":run_id"
+                          ],
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "query": [],
+                          "variable": [
+                            {
+                              "type": "any",
+                              "value": "{{run_id}}",
+                              "key": "run_id",
+                              "disabled": false,
+                              "description": {
+                                "content": "(Required) ",
+                                "type": "text/plain"
+                              }
+                            }
+                          ]
+                        },
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "method": "GET",
+                        "body": {},
+                        "auth": null
+                      },
+                      "response": [
+                        {
+                          "id": "e2663cf8-cc5e-4936-a279-aaa6ac553a29",
+                          "name": "Successful Response",
+                          "originalRequest": {
+                            "url": {
+                              "path": [
+                                "api",
+                                "v1",
+                                "runs",
+                                ":run_id"
+                              ],
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "query": [],
+                              "variable": [
+                                {
+                                  "disabled": false,
+                                  "description": {
+                                    "content": "(Required) ",
+                                    "type": "text/plain"
+                                  },
+                                  "type": "any",
+                                  "value": "<string>",
+                                  "key": "run_id"
+                                }
+                              ]
+                            },
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "method": "GET",
+                            "body": {}
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "body": "{\n  \"run_id\": \"<string>\",\n  \"scenario\": \"<string>\",\n  \"mode\": \"<string>\",\n  \"created_at\": \"<dateTime>\",\n  \"input_hash\": \"<string>\",\n  \"agent_steps\": [\n    {\n      \"key_0\": \"string\",\n      \"key_1\": \"string\"\n    },\n    {\n      \"key_0\": 2228\n    }\n  ],\n  \"outputs\": {\n    \"key_0\": 7656.415157778218,\n    \"key_1\": \"string\"\n  },\n  \"evidence\": [\n    {\n      \"source\": \"<string>\",\n      \"locator\": \"<string>\",\n      \"retrieved_at\": \"<dateTime>\",\n      \"content_hash\": \"<string>\"\n    },\n    {\n      \"source\": \"<string>\",\n      \"locator\": \"<string>\",\n      \"retrieved_at\": \"<dateTime>\",\n      \"content_hash\": \"<string>\"\n    }\n  ],\n  \"usage\": {\n    \"latency_ms\": \"<integer>\",\n    \"model\": \"deterministic/replay\",\n    \"tokens\": 0,\n    \"estimated_cost_usd\": 0\n  },\n  \"status\": \"completed\",\n  \"errors\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                          "cookie": [],
+                          "_postman_previewlanguage": "json"
+                        },
+                        {
+                          "id": "86833bd5-88e4-49a7-ba86-8c712b8dd5e5",
+                          "name": "Validation Error",
+                          "originalRequest": {
+                            "url": {
+                              "path": [
+                                "api",
+                                "v1",
+                                "runs",
+                                ":run_id"
+                              ],
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "query": [],
+                              "variable": [
+                                {
+                                  "disabled": false,
+                                  "description": {
+                                    "content": "(Required) ",
+                                    "type": "text/plain"
+                                  },
+                                  "type": "any",
+                                  "value": "<string>",
+                                  "key": "run_id"
+                                }
+                              ]
+                            },
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "method": "GET",
+                            "body": {}
+                          },
+                          "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+                          "code": 422,
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "application/json"
+                            }
+                          ],
+                          "body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\",\n      \"input\": \"\",\n      \"ctx\": {}\n    },\n    {\n      \"loc\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"msg\": \"<string>\",\n      \"type\": \"<string>\",\n      \"input\": \"\",\n      \"ctx\": {}\n    }\n  ]\n}",
+                          "cookie": [],
+                          "_postman_previewlanguage": "json"
+                        }
+                      ],
+                      "event": [
+                        {
+                          "script": {
+                            "type": "text/javascript",
+                            "packages": {},
+                            "exec": [
+                              "pm.test(\"HTTP status is successful\", () => pm.expect(pm.response.code).to.be.oneOf([200, 202]));",
+                              "pm.test(\"Response is JSON\", () => pm.response.to.be.json);",
+                              "const body = pm.response.json();",
+                              "pm.test(\"Run ID matches\", () => pm.expect(body.run_id).to.eql(pm.collectionVariables.get(\"run_id\")));"
+                            ]
+                          },
+                          "listen": "test"
+                        }
+                      ],
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://127.0.0.1:8000"
+    },
+    {
+      "key": "run_id",
+      "value": ""
+    },
+    {
+      "key": "vertical",
+      "value": ""
+    }
+  ],
+  "info": {
+    "_postman_id": "700fe126-524f-4f41-adc2-b862a24cdce6",
+    "name": "AgentOps Mission Control",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Replay-first telemetry analysis with deterministic incident gates.",
+      "type": "text/plain"
+    }
+  }
+}

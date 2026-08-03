@@ -1,0 +1,13 @@
+flowchart TD
+  A[Telemetry Normalizer] --> B[Incident Detector]
+  B --> C[Failure rule]
+  B --> D[Latency rule]
+  B --> E[Staleness rule]
+  B --> F[Budget rule]
+  B --> G[Approval rule]
+  C --> H[Operations Reporter]
+  D --> H
+  E --> H
+  F --> H
+  G --> H
+  H --> I[Evidence backed incident brief]
