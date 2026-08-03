@@ -3,7 +3,9 @@
 An operational control surface that turns raw agent telemetry into evidence-backed incidents for failed, slow, stale, over-budget, and approval-blocked runs.
 
 **Portfolio role:** Agentic AI & LLM Systems Specialist
-**Status:** core and evaluation complete; Vercel preview pending verification
+**Status:** public demo verified on Vercel on 2026-08-03
+**Live demo:** https://agentops-mission-control.vercel.app
+**Verified runtime commit:** `edf07e46115d9367f6485790b5b268e05be5026f`
 **Safety:** replay-first, read-only analysis, zero external mutations
 
 ## What this proves

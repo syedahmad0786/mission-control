@@ -15,4 +15,11 @@
 
 Boundary checks passed for idempotent replay, conflicting input rejection, ordered timestamps, bounded cost, bounded steps, and zero external mutations. OpenTelemetry also remains safe when no exporter is configured.
 
-Preview Postman, browser, and deployment checks are recorded here only after a commit-specific Vercel preview passes them.
+## Public deployment verification
+
+- Live URL: https://agentops-mission-control.vercel.app
+- Runtime commit: `edf07e46115d9367f6485790b5b268e05be5026f`
+- GitHub CI: pass
+- Postman CLI against the commit-specific preview: 4 requests and 11 assertions, 0 failures
+- Browser journeys: 1280×800 and 390×844, 0 console errors and 0 horizontal overflow
+- Release: the tested preview artifact was promoted without rebuilding
